@@ -4,7 +4,7 @@ This is a Django REST Framework project that runs in Docker.
 
 ## Burgerstore operation
 
-A functional backend service for customers and store staff can create and manage orders 
+A functional backend service for customers and store staff can create and manage carts 
 
 ## Prerequisites
 

@@ -9,4 +9,4 @@ spec:
   ports: 
   - name: goserver-service
     port: 80
-    targetPort: 8080
+    targetPort: 6060

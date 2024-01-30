@@ -23,7 +23,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 6060
 
 # Run migrations
 #RUN python manage.py makemigrations
@@ -32,4 +32,4 @@ EXPOSE 8080
 # Run the create_superuser.py script to create the superuser
 #RUN python cmd_create_superuser.py
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:6060"]

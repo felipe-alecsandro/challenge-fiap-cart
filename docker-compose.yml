@@ -1,11 +1,11 @@
 version: '3.7'
 
 services:
-  orderdb:
+  cartdb:
     image: postgres
-    container_name: orderdb
+    container_name: cartdb
     environment:
-      - POSTGRES_DB=orderdb
+      - POSTGRES_DB=cartdb
       - POSTGRES_USER=fiap
       - POSTGRES_PASSWORD=fiap
     volumes:
@@ -15,21 +15,21 @@ services:
     networks:
       - project-network
 
-  order-app:
+  cart-app:
     #build: .
     image: deboraferrarids2/challenge_web:v2.0
-    container_name: order-app
+    container_name: cart-app
     volumes:
       - .:/usr/src/app
       - ./logs:/usr/src/app/logs
     ports:
-      - "8080:8080"
+      - "6060:6060"
     depends_on:
-      - orderdb
+      - cartdb
     networks:
       - project-network
     restart: always
-    command: bash -c "sleep 10 && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8080" 
+    command: bash -c "sleep 10 && python manage.py makemigrations && python manage.py migrate && python manage.py populate_products && python manage.py runserver 0.0.0.0:6060" 
 
 volumes:
   data:

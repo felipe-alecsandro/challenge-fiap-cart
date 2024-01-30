@@ -22,10 +22,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SEcURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-gqwcu42q9&7e#t!$$vfv7*2kc=vx3jiae6fi36itb-5lx10)+h'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SEcURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'burgerstore',
-    'order',
+    'cart',
 ]
 
 
@@ -71,29 +71,29 @@ MIDDLEWARE = [
 ]
 
 # SIMPLE_JWT = {
-#     'ACCESS_TOKEN_LIFETIME': timedelta(days=10),
+#     'AccESS_TOKEN_LIFETIME': timedelta(days=10),
 #     'REFRESH_TOKEN_LIFETIME': timedelta(days=20),
 #     'ROTATE_REFRESH_TOKENS': True,
-#     'BLACKLIST_AFTER_ROTATION': True,
+#     'BLAcKLIST_AFTER_ROTATION': True,
 #     'UPDATE_LAST_LOGIN': False,
 
 #     'ALGORITHM': 'HS256',
-#     'SIGNING_KEY': SECRET_KEY,
+#     'SIGNING_KEY': SEcRET_KEY,
 #     'VERIFYING_KEY': None,
-#     'AUDIENCE': None,
+#     'AUDIENcE': None,
 #     'ISSUER': None,
 
 #     'AUTH_HEADER_TYPES': ('Bearer', 'JWT'),
 #     'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
 #     'USER_ID_FIELD': 'id',
-#     'USER_ID_CLAIM': 'user_id',
+#     'USER_ID_cLAIM': 'user_id',
 
-#     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
-#     'TOKEN_TYPE_CLAIM': 'token_type',
+#     'AUTH_TOKEN_cLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+#     'TOKEN_TYPE_cLAIM': 'token_type',
 
-#     'JTI_CLAIM': 'jti',
+#     'JTI_cLAIM': 'jti',
 
-#     'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
+#     'SLIDING_TOKEN_REFRESH_EXP_cLAIM': 'refresh_exp',
 #     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=10),
 #     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=20),
 # }
@@ -131,16 +131,16 @@ import os
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'orderdb',
+        'NAME': 'cartdb',
         'USER': 'fiap',
         'PASSWORD': 'fiap',
-        'HOST': 'orderdb',
+        'HOST': 'cartdb',
         'PORT': '5432'
     }
 }
 
 # AUTH_USER_MODEL = 'user_auth.BaseUser'
-# AUTHENTICATION_BACKENDS = [
+# AUTHENTIcATION_BAcKENDS = [
 #     'django.contrib.auth.backends.ModelBackend',
 # ]
 
@@ -157,7 +157,7 @@ DATABASES = {
 #         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
 #     },
 #     {
-#         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+#         'NAME': 'django.contrib.auth.password_validation.commonPasswordValidator',
 #     },
 #     {
 #         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
@@ -176,7 +176,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files (cSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
@@ -214,17 +214,17 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 # Set the session cookie name (default is 'sessionid')
 SESSION_COOKIE_NAME = 'burgerstore_cookie'
 
-# Set the session cookie age (default is 2 weeks)
+# Set the session Cookie age (default is 2 weeks)
 SESSION_COOKIE_AGE = 3600  # 1 hour
 
-# Set the session cookie path (default is '/')
+# Set the session Cookie path (default is '/')
 SESSION_COOKIE_PATH = '/burgerstore/'
 
-# Set the session cookie domain (default is None)
+# Set the session Cookie domain (default is None)
 SESSION_COOKIE_DOMAIN = 'burgerstore.com'
 
-# Set whether the session cookie should be secure (default is False)
+# Set whether the session Cookie should be seCure (default is False)
 SESSION_COOKIE_SECURE = True
 
-# Set whether the session cookie should be HTTP-only (default is True)
+# Set whether the session Cookie should be HTTP-only (default is True)
 SESSION_COOKIE_HTTPONLY = True

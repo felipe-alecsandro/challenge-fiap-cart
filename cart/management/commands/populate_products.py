@@ -1,7 +1,7 @@
 import csv
 import os
 from django.core.management.base import BaseCommand
-from order.models import Product
+from cart.models import Product
 
 class Command(BaseCommand):
     help = 'Populate products from a CSV file'

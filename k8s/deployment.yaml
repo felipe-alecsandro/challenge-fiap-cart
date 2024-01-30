@@ -17,7 +17,7 @@ spec:
           image: postgres
           env:
             - name: POSTGRES_DB
-              value: orderdb
+              value: cartdb
             - name: POSTGRES_USER
               valueFrom:
                 secretKeyRef:
@@ -46,4 +46,4 @@ spec:
             - name: DATABASE_HOST
               value: db
           ports:
-            - containerPort: 8080
+            - containerPort: 6060

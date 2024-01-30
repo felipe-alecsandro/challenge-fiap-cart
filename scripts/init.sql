@@ -1,1 +1,1 @@
-CREATE DATABASE orderdb WITH OWNER = fiap;
+CREATE DATABASE cartdb WITH OWNER = fiap;
